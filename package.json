@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export",
+    "start": "next start",
+    "deploy": "yarn build && touch out/.nojekyll && cp ./CNAME ./out && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "next": "10.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1"

@@ -1,7 +1,7 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import cx from "classnames/bind";
-import styles from "../styles/Home.module.css";
+import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import cx from 'classnames/bind';
+import styles from '../styles/Home.module.css';
 
 const getClassNames = cx.bind(styles);
 
@@ -20,10 +20,10 @@ export default function Home() {
   return (
     <div className={containerClassNames}>
       <Head>
-        <title>Dev proflle</title>
+        <title>Dev profile</title>
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>Kliushta Taras</h1>
+        <h1 className={styles.title}>Taras Kliushta</h1>
         <h3 className={styles.subtitle}>Front-End developer</h3>
         <div className={styles.icons}>{getLinksConfig().map(renderLink)}</div>
       </main>
@@ -44,21 +44,21 @@ function getLinksConfig() {
   return [
     {
       linksProps: {
-        target: "_blank",
-        href: "mailto:tarasklyushta@gmail.com",
+        target: '_blank',
+        href: 'mailto:tarasklyushta@gmail.com',
       },
       className: styles.icon,
-      src: "/assets/m.svg",
-      alt: "mail",
+      src: '/assets/m.svg',
+      alt: 'mail',
     },
     {
       linksProps: {
-        target: "_blank",
-        href: "https://www.linkedin.com/in/taras-kliushta-b985a675/",
+        target: '_blank',
+        href: 'https://www.linkedin.com/in/taras-kliushta-b985a675/',
       },
       className: styles.icon,
-      src: "/assets/ln.svg",
-      alt: "linkedin",
+      src: '/assets/ln.svg',
+      alt: 'linkedin',
     },
   ];
 }

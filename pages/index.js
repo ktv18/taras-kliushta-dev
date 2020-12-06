@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import cx from 'classnames/bind';
 import styles from '../styles/Home.module.css';
@@ -20,7 +21,11 @@ export default function Home() {
   return (
     <div className={containerClassNames}>
       <Head>
-        <title>Dev profile</title>
+        <title>Taras Kliushta</title>
+        <meta
+          name='description'
+          content='Taras Kliushta - Front-End developer'
+        ></meta>
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Taras Kliushta</h1>
@@ -31,11 +36,11 @@ export default function Home() {
   );
 }
 
-function renderLink(props) {
+function renderLink(props, index) {
   const { linksProps, ...imageProps } = props;
   return (
-    <a {...linksProps}>
-      <img {...imageProps} />
+    <a key={index} {...linksProps}>
+      <Image {...imageProps} />
     </a>
   );
 }
@@ -45,20 +50,24 @@ function getLinksConfig() {
     {
       linksProps: {
         target: '_blank',
-        href: 'mailto:tarasklyushta@gmail.com',
+        href: 'https://www.linkedin.com/in/taras-kliushta-b985a675/',
       },
+      height: 20,
+      width: 20,
       className: styles.icon,
-      src: '/assets/m.svg',
-      alt: 'mail',
+      src: '/assets/ln.svg',
+      alt: 'linkedin',
     },
     {
       linksProps: {
         target: '_blank',
-        href: 'https://www.linkedin.com/in/taras-kliushta-b985a675/',
+        href: 'mailto:tarasklyushta@gmail.com',
       },
+      height: 20,
+      width: 20,
       className: styles.icon,
-      src: '/assets/ln.svg',
-      alt: 'linkedin',
+      src: '/assets/m.svg',
+      alt: 'mail',
     },
   ];
 }

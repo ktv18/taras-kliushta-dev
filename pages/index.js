@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import cx from 'classnames/bind';
 import styles from '../styles/Home.module.css';
@@ -20,13 +19,6 @@ export default function Home() {
 
   return (
     <div className={containerClassNames}>
-      <Head>
-        <title>Taras Kliushta</title>
-        <meta
-          name='description'
-          content='Taras Kliushta - Front-End developer'
-        ></meta>
-      </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Taras Kliushta</h1>
         <h3 className={styles.subtitle}>Front-End developer</h3>
@@ -40,7 +32,7 @@ function renderLink(props, index) {
   const { linksProps, ...imageProps } = props;
   return (
     <a key={index} {...linksProps}>
-      <Image {...imageProps} />
+      <img {...imageProps} />
     </a>
   );
 }

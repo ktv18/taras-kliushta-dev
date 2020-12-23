@@ -53,6 +53,18 @@ function getLinksConfig() {
     {
       linksProps: {
         target: '_blank',
+        href: '/cv.pdf',
+        download: true,
+      },
+      height: 20,
+      width: 20,
+      className: styles.icon,
+      src: '/assets/cv.svg',
+      alt: 'download cv',
+    },
+    {
+      linksProps: {
+        target: '_blank',
         href: 'mailto:tarasklyushta@gmail.com',
       },
       height: 20,

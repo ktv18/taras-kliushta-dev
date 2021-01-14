@@ -53,7 +53,7 @@ function getLinksConfig() {
     {
       linksProps: {
         target: '_blank',
-        href: '/cv.pdf',
+        href: '/Taras_Kliushta_Senior_Front-end_Developer.pdf',
         download: true,
       },
       height: 20,
